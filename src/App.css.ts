@@ -26,7 +26,7 @@ export const vars = createGlobalTheme(":root", {
   },
   spacing: {
     small: "5px",
-    medius: "10px",
+    medium: "10px",
     big1: "20px",
     big2: "15px",
     listSpacing: "30px",
