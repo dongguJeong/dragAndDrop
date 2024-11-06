@@ -5,7 +5,7 @@ import ActionButton from "../ActionButton/ActionButton";
 import { listsContainer } from "./ListsContainer.css";
 
 type TListsContainerProps = {
-  lists: IList;
+  lists: IList[];
   boardId: string;
 };
 const ListsContainer: React.FC<TListsContainerProps> = ({ lists, boardId }) => {

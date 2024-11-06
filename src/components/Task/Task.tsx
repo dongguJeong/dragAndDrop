@@ -1,5 +1,7 @@
 import React from "react";
 import { container, description, title } from "./Task.css";
+import { useTypedDispatch } from "../../hooks/redux";
+import { setModalActive } from "../../store/slices/modalSlice";
 
 type TTaskProps = {
   index: number;
@@ -16,8 +18,10 @@ const Task: React.FC<TTaskProps> = ({
   taskName,
   taskDescription,
 }) => {
+  const dispatch = useTypedDispatch();
+
   return (
-    <div className={container}>
+    <div className={container} onClick={() => dispatch(setModalActive(true))}>
       <div className={title}>{taskName}</div>
       <div className={description}>{taskDescription}</div>
     </div>
